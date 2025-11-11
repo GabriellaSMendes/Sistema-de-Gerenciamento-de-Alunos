@@ -8,3 +8,5 @@ def conectar():
         password="root",
         database="sistema_gerenciamento"
     )
+    
+    return conexao

@@ -1,6 +1,6 @@
 from .enum import Situacao
 
-class Relatorio():
+class Relatorio:
     
     #construtor
     def __init__(self, id, aluno_id, media, situacao: Situacao):
