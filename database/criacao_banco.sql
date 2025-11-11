@@ -21,6 +21,7 @@ CREATE TABLE IF NOT EXISTS disciplina(
 
 CREATE TABLE IF NOT EXISTS turma(
 	id INT AUTO_INCREMENT PRIMARY KEY,
+    cod_turma VARCHAR(15) NOT NULL,
     id_disciplina INT NOT NULL,
     id_professor INT NOT NULL,
     ano INT NOT NULL,

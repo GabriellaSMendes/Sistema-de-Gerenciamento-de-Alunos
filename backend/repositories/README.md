@@ -1,3 +1,3 @@
-#Camada repositories
+# Camada repositories
 
-Camada de acesso ao banco com as funções do CRUD que sejam necessárias
+Camada de conexão com banco com as funções do CRUD que são necessárias
