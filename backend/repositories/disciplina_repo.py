@@ -20,3 +20,19 @@ class DisciplinaRepository:
         conexao.commit()
         cursor.close()
         conexao.close()
+        
+    #listar disciplinas
+    def listarDisciplina(self):
+        conexao, cursor = self.abrirConexao()
+        
+        cursor.execute(
+            "SELECT * FROM disciplina"
+        )
+        
+        
+        resultados = cursor.fetchall()
+        
+        cursor.close()
+        conexao.close()
+        
+        return resultados

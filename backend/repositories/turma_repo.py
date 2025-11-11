@@ -13,8 +13,8 @@ class TurmaRepository:
         conexao, cursor = self.abrirConexao()
         
         cursor.execute(
-            "INSERT INTO turma (id_disciplina, cod_turma, id_professor, ano, semestre) VALUES (%s, %s, %s, %s, %s)",
-            (turma.id_disciplina, turma.cod_turma, turma.id_professor, turma.ano, turma.semestre)
+            "INSERT INTO turma (id_disciplina, cod_turma, id_professor, sigla_curso, ano, semestre) VALUES (%s, %s, %s, %s, %s, %s)",
+            (turma.id_disciplina, turma.cod_turma, turma.id_professor, turma.sigla_curso, turma.ano, turma.semestre)
         )
         
         conexao.commit()
@@ -22,15 +22,17 @@ class TurmaRepository:
         conexao.close()
         
         
-    #deletar turma
-    def deletarTurma(self, id):
+    #listar turma
+    def listarTurma(self):
         conexao, cursor = self.abrirConexao()
         
         cursor.execute(
-            "DELETE FROM turma WHERE id = %s",
-            (id,)
+            "SELECT * FROM turma",
         )
         
-        conexao.commit()
+        resultados = cursor.fetchall()
+
         cursor.close()
         conexao.close()
+        
+        return resultados
