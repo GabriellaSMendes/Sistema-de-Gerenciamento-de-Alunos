@@ -1,0 +1,2 @@
+#pip install -r requirements.txt <-- rodar no terminal
+mysql-connector-python
