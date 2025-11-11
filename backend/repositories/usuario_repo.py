@@ -9,6 +9,22 @@ class UsuarioRepository:
         cursor = conexao.cursor()
         return(conexao, cursor)
     
+    #busca por ID
+    def buscarPorID(self, id):
+        conexao, cursor = self.abrirConexao()
+        
+        cursor.execute(
+            "SELECT * FROM usuario WHERE id = %s",
+            (id,)
+        )
+        
+        resultado = cursor.fetchone()
+        
+        cursor.close()
+        conexao.close()
+        
+        return resultado
+    
     #Criar usuário
     def criarUsuario(self, usuario):
         conexao, cursor = self.abrirConexao()
@@ -30,7 +46,6 @@ class UsuarioRepository:
         cursor.execute(
             "SELECT * FROM usuario"
         )
-        
         
         resultados = cursor.fetchall()
         

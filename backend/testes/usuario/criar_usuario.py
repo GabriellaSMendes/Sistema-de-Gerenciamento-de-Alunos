@@ -6,10 +6,12 @@ repo = UsuarioRepository()
 
 usuario = Usuario(
     id=None, 
-    nome="Gabriella Mendes", 
-    matricula="SPO315", 
-    email="gabriella@email.com", 
+    nome="Roberta Carvalho", 
+    matricula="SPO209", 
+    email="roberta@email.com", 
     senha="123456", 
-    tipo=Tipo.ALUNO)
+    tipo=Tipo.PROFESSOR)
 
 repo.criarUsuario(usuario)
+
+print("Usuário criado.")
