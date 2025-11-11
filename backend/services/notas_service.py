@@ -22,6 +22,8 @@ class NotasService:
             print("Usuário não é aluno. Não é possível lançar nota.")
             return
         
+        nota = round(float(nota), 2)
+        
         nota = Notas(None, id_disciplina, aluno_id, turma_id, avaliacao, nota, data_lancamento)
         self.repo.lancarNotas(nota)
         print(f"Nota lançada para o aluno {usuario[1]}")
