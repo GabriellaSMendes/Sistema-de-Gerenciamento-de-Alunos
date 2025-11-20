@@ -52,5 +52,5 @@ class MediaService:
         self.relatorio_repo.gravarRelatorio(relatorio)
 
         print(f"Média calculada: {media} — Situação: {situacao.value}")
-        return media
+        return media, situacao
     
