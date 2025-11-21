@@ -5,17 +5,14 @@ class TurmaService:
     def __init__(self):
         self.repo = TurmaRepository()   
         
-    def criarTurma(self, id_disciplina, id_professor, sigla_curso, ano, semestre):
+    def criarTurma(self, cod_turma, id_disciplina, id_professor, ano, semestre):
         
         #campos obrigatorios
-        if not id_disciplina or not id_professor or not sigla_curso or not ano or not semestre:
+        if not id_disciplina or not id_professor or not ano or not semestre:
             print("Existem campos obrigatórios.")
             return
         
-        # gera código da turma
-        ano_curto = str(ano)[2:]
-        cod_turma = f"T{sigla_curso.upper()}{ano_curto}0{semestre}"
-        
-        turma = Turma(id, cod_turma, id_disciplina, id_professor, sigla_curso, ano, semestre)
+                
+        turma = Turma(None, cod_turma, id_disciplina, id_professor, None, ano, semestre)
         self.repo.criarTurma(turma)
         print(f"Turma {cod_turma} criada.")

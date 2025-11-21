@@ -1,0 +1,34 @@
+:root {
+  --azul1: #3D5884;
+  --azul2: #292D33;
+  --azul3: #384559;
+  --azul4: #72839E;
+  --texto: #ffffff;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  color: black;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+.container {
+  padding: 20px;
+}
+
+.btn {
+  background-color: var(--azul3);
+  border: none;
+  padding: 10px 15px;
+  color: var(--texto);
+  border-radius: 4px;
+  margin: 5px;
+}
+
+.btn:hover {
+  background-color: var(--azul1);
+}

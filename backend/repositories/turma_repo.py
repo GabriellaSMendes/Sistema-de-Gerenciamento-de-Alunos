@@ -13,9 +13,10 @@ class TurmaRepository:
         conexao, cursor = self.abrirConexao()
         
         cursor.execute(
-            "INSERT INTO turma (id_disciplina, cod_turma, id_professor, sigla_curso, ano, semestre) VALUES (%s, %s, %s, %s, %s, %s)",
-            (turma.id_disciplina, turma.cod_turma, turma.id_professor, turma.sigla_curso, turma.ano, turma.semestre)
+            "INSERT INTO turma (cod_turma, id_disciplina, id_professor, ano, semestre) VALUES (%s, %s, %s, %s, %s)",
+            (turma.cod_turma, turma.id_disciplina, turma.id_professor, turma.ano, turma.semestre)
         )
+
         
         conexao.commit()
         cursor.close()

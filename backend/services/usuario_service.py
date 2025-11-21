@@ -1,5 +1,6 @@
 from backend.repositories.usuario_repo import UsuarioRepository
 from backend.models.usuario import Usuario
+from backend.models.enum import Tipo
 
 class UsuarioService:
     def __init__(self):
@@ -37,11 +38,7 @@ class UsuarioService:
             matricula=matricula,
             email=email,
             senha=senha,
-            tipo=tipo
+            tipo=Tipo(tipo)
         )
         self.repo.criarUsuario(usuario)
         print("Usuário criado!")
-
-        
-        
-        

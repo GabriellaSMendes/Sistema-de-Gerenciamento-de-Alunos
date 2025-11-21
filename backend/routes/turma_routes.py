@@ -16,11 +16,12 @@ def criar_turma():
     data = request.get_json()
     
     service.criarTurma(
+        cod_turma=data.get("cod_turma"),
         id_disciplina=data.get("id_disciplina"),
         id_professor=data.get("id_professor"),
-        sigla_curso=data.get("sigla_curso"),
         ano=data.get("ano"),
         semestre=data.get("semestre")
     )
+
     
     return jsonify({"message": "Turma criada!"})

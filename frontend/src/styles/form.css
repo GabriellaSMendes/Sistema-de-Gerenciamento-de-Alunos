@@ -1,0 +1,27 @@
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 10px;
+}
+
+input, select {
+  padding: 8px;
+  border: 1px solid var(--azul4);
+  border-radius: 4px;
+}
+
+label {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.success {
+  color: lightgreen;
+  margin-top: 10px;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}

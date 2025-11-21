@@ -1,12 +1,11 @@
 class Turma:
     
     #construtor
-    def __init__(self, id, cod_turma, id_disciplina, id_professor, sigla_curso, ano, semestre):
+    def __init__(self, id, cod_turma, id_disciplina, id_professor, ano, semestre):
         self.id = id
         self.cod_turma = cod_turma
         self.id_disciplina = id_disciplina
         self.id_professor = id_professor
-        self.sigla_curso = sigla_curso
         self.ano = ano
         self.semestre = semestre
     
